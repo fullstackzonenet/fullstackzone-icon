@@ -1,0 +1,48 @@
+// base icon class definition
+// -------------------------
+
+.@{fsz-css-prefix} {
+  font-family: ~"var(--@{fsz-css-prefix}-style-family, '@{fsz-style-family}')";
+  font-weight: ~'var(--@{fsz-css-prefix}-style, @{fsz-style})';
+}
+
+.fas,
+.far,
+.fab,
+.@{fsz-css-prefix}-solid,
+.@{fsz-css-prefix}-regular,
+.@{fsz-css-prefix}-brands,
+
+.@{fsz-css-prefix}-sharp-solid,
+.@{fsz-css-prefix}-classic,
+.@{fsz-css-prefix} {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: ~'var(--@{fsz-css-prefix}-display, @{fsz-display})';
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.fas::before,
+.far::before,
+.fab::before,
+.@{fsz-css-prefix}-solid::before,
+.@{fsz-css-prefix}-regular::before,
+.@{fsz-css-prefix}-brands::before,
+.fa::before {
+  content: ~'var(@{fsz-icon-property})';
+}
+
+.@{fsz-css-prefix}-classic,
+.fas,
+.@{fsz-css-prefix}-solid,
+.far,
+.@{fsz-css-prefix}-regular {
+  font-family: 'Full Stack Zone Free';
+}
+.@{fsz-css-prefix}-brands,
+.fab {
+  font-family: 'Font Awesome 6 Brands';
+}

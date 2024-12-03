@@ -1,0 +1,49 @@
+// base icon class definition
+// -------------------------
+
+.#{$fsz-css-prefix} {
+  font-family: var(--#{$fsz-css-prefix}-style-family, '#{$fsz-style-family}');
+  font-weight: var(--#{$fsz-css-prefix}-style, #{$fsz-style});
+}
+
+.fszs,
+.fszr,
+.fszb,
+.#{$fsz-css-prefix}-solid,
+.#{$fsz-css-prefix}-regular,
+.#{$fsz-css-prefix}-brands,
+.#{$fsz-css-prefix} {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--#{$fsz-css-prefix}-display, #{$fsz-display});
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.fszs::before,
+.fszr::before,
+.fszb::before,
+.#{$fsz-css-prefix}-solid::before,
+.#{$fsz-css-prefix}-regular::before,
+.#{$fsz-css-prefix}-brands::before,
+.fsz::before {
+  content: var(#{$fsz-icon-property});
+}
+
+.#{$fsz-css-prefix}-classic,
+.fszs,
+.#{$fsz-css-prefix}-solid,
+.fszr,
+.#{$fsz-css-prefix}-regular {
+  font-family: 'Full Stack Zone Free';
+}
+.#{$fsz-css-prefix}-brands,
+.fszb {
+  font-family: 'Font Awesome 6 Brands';
+}
+
+%fsz-icon {
+  @include fsz-icon;
+}

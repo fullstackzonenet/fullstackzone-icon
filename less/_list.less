@@ -1,0 +1,18 @@
+// icons in a list
+// -------------------------
+
+.@{fsz-css-prefix}-ul {
+  list-style-type: none;
+  margin-left: ~'var(--@{fsz-css-prefix}-li-margin, @{fsz-li-margin})';
+  padding-left: 0;
+
+  > li { position: relative; }
+}
+
+.@{fsz-css-prefix}-li {
+  left: calc(~'var(--@{fsz-css-prefix}-li-width, @{fsz-li-width})' * -1);
+  position: absolute;
+  text-align: center;
+  width: ~'var(--@{fsz-css-prefix}-li-width, @{fsz-li-width})';
+  line-height: inherit;
+}

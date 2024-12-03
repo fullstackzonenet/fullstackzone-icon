@@ -1,0 +1,12 @@
+// specific icon class definition
+// -------------------------
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+
+each(.fsz-icons(), {
+  .@{fsz-css-prefix}-@{key} {
+    @{fsz-icon-property}: @value;
+    @{fsz-duotone-icon-property}: %("%s%s", @value, @value);
+  }
+});
